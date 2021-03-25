@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scala.Toestellen.Wpf", "Scala.Toestellen.Wpf\Scala.Toestellen.Wpf.csproj", "{7A3EA81C-B461-4AFA-B4C5-07BE8851E11B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scala.Toestellen.Core", "Scala.Toestellen.Core\Scala.Toestellen.Core.csproj", "{0C87E275-455D-41F7-9EC3-A09679A82409}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A3EA81C-B461-4AFA-B4C5-07BE8851E11B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A3EA81C-B461-4AFA-B4C5-07BE8851E11B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3EA81C-B461-4AFA-B4C5-07BE8851E11B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A3EA81C-B461-4AFA-B4C5-07BE8851E11B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C87E275-455D-41F7-9EC3-A09679A82409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C87E275-455D-41F7-9EC3-A09679A82409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C87E275-455D-41F7-9EC3-A09679A82409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C87E275-455D-41F7-9EC3-A09679A82409}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAFC80C1-4291-4524-B556-DE9519FD9C3D}
+	EndGlobalSection
+EndGlobal

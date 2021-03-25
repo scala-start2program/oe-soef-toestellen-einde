@@ -1,0 +1,56 @@
+﻿<Window x:Class="Scala.Toestellen.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scala.Toestellen.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="494" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox x:Name="grpToestellen" Header="Toestellen" HorizontalAlignment="Left" Height="448" Margin="10,10,0,0" VerticalAlignment="Top" Width="304">
+            <Grid>
+                <Button x:Name="btnNieuw" Content="Nieuw" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="66" Click="btnNieuw_Click"/>
+                <Button x:Name="btnWijzig" Content="Wijzig" HorizontalAlignment="Left" Height="25" Margin="81,10,0,0" VerticalAlignment="Top" Width="66" Click="btnWijzig_Click"/>
+                <Button x:Name="btnVerwijder" Content="Verwijder" HorizontalAlignment="Left" Height="25" Margin="152,10,0,0" VerticalAlignment="Top" Width="66" Click="btnVerwijder_Click"/>
+                <ListBox x:Name="lstToestellen" HorizontalAlignment="Center" Height="309" Margin="0,102,0,0" VerticalAlignment="Top" Width="270" SelectionChanged="lstToestellen_SelectionChanged"/>
+                <Label Content="Filter : " HorizontalAlignment="Left" Height="26" Margin="18,56,0,0" VerticalAlignment="Top" Width="58"/>
+                <ComboBox x:Name="cmbFilter" HorizontalAlignment="Left" Height="26" Margin="81,56,0,0" VerticalAlignment="Top" Width="201" SelectionChanged="cmbFilter_SelectionChanged"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpDetails" Header="Details" HorizontalAlignment="Left" Height="320" Margin="332,10,0,0" VerticalAlignment="Top" Width="458">
+            <Grid>
+                <Label Content="Merk : " HorizontalAlignment="Left" Height="25" Margin="10,54,0,0" VerticalAlignment="Top" Width="97"/>
+                <Label Content="Serie : " HorizontalAlignment="Left" Height="25" Margin="10,84,0,0" VerticalAlignment="Top" Width="97"/>
+                <Label Content="Soort : " HorizontalAlignment="Left" Height="25" Margin="10,114,0,0" VerticalAlignment="Top" Width="97"/>
+                <Label Content="Verkoopprijs : " HorizontalAlignment="Left" Height="25" Margin="10,144,0,0" VerticalAlignment="Top" Width="97"/>
+                <Label Content="Voorraad : " HorizontalAlignment="Left" Height="25" Margin="10,174,0,0" VerticalAlignment="Top" Width="97"/>
+                <Label Content="Vermogen : " HorizontalAlignment="Left" Height="26" Margin="10,216,0,0" VerticalAlignment="Top" Width="97"/>
+                <Label Content="Spanning : " HorizontalAlignment="Left" Height="26" Margin="121,216,0,0" VerticalAlignment="Top" Width="97"/>
+                <Label Content="Stroomsterkte : " HorizontalAlignment="Left" Height="25" Margin="223,216,0,0" VerticalAlignment="Top" Width="97"/>
+                <Button x:Name="btnBewaren" Content="Bewaren" HorizontalAlignment="Left" Height="29" Margin="10,10,0,0" VerticalAlignment="Top" Width="97" Click="btnBewaren_Click"/>
+                <Button x:Name="btnAnnuleren" Content="Annuleren" HorizontalAlignment="Left" Height="29" Margin="112,10,0,0" VerticalAlignment="Top" Width="97" Click="btnAnnuleren_Click"/>
+                <TextBox x:Name="txtMerk" HorizontalAlignment="Left" Height="25" Margin="130,54,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="262"/>
+                <TextBox x:Name="txtSerie" HorizontalAlignment="Left" Height="25" Margin="130,84,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="262"/>
+                <ComboBox x:Name="cmbSoort" HorizontalAlignment="Left" Height="25" Margin="130,114,0,0" VerticalAlignment="Top" Width="262"/>
+                <TextBox x:Name="txtVerkoopprijs" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="130,144,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+                <TextBox x:Name="txtVoorraad" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="130,174,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+                <TextBox x:Name="txtVermogen" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="18,247,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
+                <Label Content="W" HorizontalAlignment="Left" Height="26" Margin="80,247,0,0" VerticalAlignment="Top" Width="27"/>
+                <TextBox x:Name="txtSpanning" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="130,248,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
+                <Label Content="V" HorizontalAlignment="Left" Height="26" Margin="192,248,0,0" VerticalAlignment="Top" Width="27"/>
+                <Label Content="A" HorizontalAlignment="Left" Height="26" Margin="293,246,0,0" VerticalAlignment="Top" Width="27"/>
+                <Label x:Name="lblStroomsterkte" HorizontalContentAlignment="Right" Background="OldLace" Content="" HorizontalAlignment="Left" Height="26" Margin="227,247,0,0" VerticalAlignment="Top" Width="61"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpStats" Header="Winkelstatistiek" HorizontalAlignment="Left" Height="111" Margin="332,347,0,0" VerticalAlignment="Top" Width="458">
+            <Grid>
+                <Label Content="Totaal aantal toestellen : " HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" VerticalAlignment="Top" Width="170"/>
+                <Label Content="Totale voorraadwaarde : " HorizontalAlignment="Left" Height="26" Margin="10,41,0,0" VerticalAlignment="Top" Width="153"/>
+                <Label x:Name="lblTotaalAantal" HorizontalContentAlignment="Right" Background="OldLace" Content="" HorizontalAlignment="Left" Height="26" Margin="185,10,0,0" VerticalAlignment="Top" Width="139"/>
+                <Label x:Name="lblTotaleWaardeVoorraad" HorizontalContentAlignment="Right" Background="OldLace" Content="" HorizontalAlignment="Left" Height="26" Margin="185,41,0,0" VerticalAlignment="Top" Width="139"/>
+
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
